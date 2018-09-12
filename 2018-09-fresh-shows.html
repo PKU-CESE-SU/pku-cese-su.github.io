@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+        <link rel="shortcut icon" href="/favicon.ico">
+        <title>2018年环院迎新晚会节目单</title>
+        <style>
+            @font-face {
+                font-family: "2018-09-fresh";
+                src: url("images/2018-09-fresh.ttf") format("truetype");
+                font-style: normal;
+                font-weight: normal;
+            }
+            body {
+                padding: 0;
+                margin: 0;
+            }
+
+            #content {
+                background: url("images/2018-09-fresh-background.png");
+                background-size: 100%;
+                background-repeat: no-repeat;
+                background-position: center;
+                box-sizing: border-box;
+                font-family:  "2018-09-fresh";
+                margin: 0 auto;
+            }
+            
+            #content-cell {
+                padding: 5%;
+                height: 100%;
+            }
+            
+            #content-box {
+                max-height: calc(100% - 40px);
+                overflow-y: auto;
+            }
+
+            div#title {
+                font-size: 3em;
+                line-height: 1.8em;
+                text-align: center;
+                color: #00adee;
+            }
+
+            .show {
+                clear: both;
+                line-height: 1.5em;
+            }
+
+            .show-name {
+                float: left;
+            }
+
+            .show-player {
+                float: right;
+            }
+            
+            .show-blank {
+                clear: both;
+                height: 1em;
+            }
+        </style>
+    </head>
+    <body>
+        <table id="content">
+            <tr>
+                <td id="content-cell">
+                    <div id="title">节 目 单</div>
+                    <div id="content-box">
+                        <div class="show"><div class="show-name">歌曲《告白气球》</div><div class="show-player">万子超、石家豪、曹义彬、林鹏晟</div></div>
+                        <div class="show"><div class="show-name">歌曲《卡路里》</div><div class="show-player">吉祥玉、王冀璇、蒋徐琳、陈婷</div></div>
+                        <div class="show"><div class="show-name">舞蹈《仙才叹》</div><div class="show-player">徐妍</div></div>
+                        <div class="show"><div class="show-name">歌曲《典狱司》</div><div class="show-player">吉祥玉、钟欣琪</div></div>
+                        <div class="show"><div class="show-name">《青鸟》</div><div class="show-player">蒋徐琳吉他伴奏、杨帆独唱</div></div>
+                        <div class="show"><div class="show-name">游戏环节：听歌识曲</div></div>
+                        <div class="show-blank"></div>
+                        <div class="show"><div class="show-name">情景剧</div><div class="show-player">马小东、李正茂、刘思远、张宇帆</div></div>
+                        <div class="show"><div class="show-name">配音</div><div class="show-player">董千里、杨佳炜、刘潞、肖逸龙</div></div>
+                        <div class="show"><div class="show-name">吉他弹唱  《需要人陪》</div><div class="show-player">陈梓正</div></div>
+                        <div class="show"><div class="show-name">《红颜旧》</div><div class="show-player">孟祥馨悦古筝伴奏、刘俊宙独唱</div></div>
+                        <div class="show"><div class="show-name">歌曲《小幸运》</div><div class="show-player">钟欣琪、徐妍、唐雅金、杨帆</div></div>
+                        <div class="show"><div class="show-name">魔术</div><div class="show-player">莫山圣</div></div>
+                        <div class="show"><div class="show-name">抽奖环节</div></div>
+                        <div class="show-blank"></div>
+                        <div class="show"><div class="show-name">cups杯子舞</div><div class="show-player">尹佳芃、张淑婕、丁茜、钟沛文</div></div>
+                        <div class="show"><div class="show-name">电子琴独奏《拉德茨基进行曲》+《赛马》</div><div class="show-player">周方升</div></div>
+                        <div class="show"><div class="show-name">歌曲《庐州月》</div><div class="show-player">聂齐越、张晓彤</div></div>
+                        <div class="show"><div class="show-name">韩舞串烧《good luck +babe》</div><div class="show-player">尹佳芃</div></div>
+                    </div>
+                </td>
+            </tr>
+        </table>
+        <script>
+            function resizeHeight() {
+                var width = window.innerWidth < 568 ? window.innerWidth : 568,
+                    height = width * 1.5,
+                    fontSize = width / 25;
+                    topMargin = (window.innerHeight - height) / 2,
+                    contentStyle = document.getElementById("content").style;
+                contentStyle.width = width + "px";
+                contentStyle.height = height + "px";
+                contentStyle.fontSize = (fontSize > 14 ? fontSize : 14) + "px";
+                contentStyle.marginTop = (topMargin > 0 ? topMargin : 0) + "px";
+            }
+            resizeHeight();
+            window.addEventListener("resize", resizeHeight);
+        </script>
+    </body>
+</html>
