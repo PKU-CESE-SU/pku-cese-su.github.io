@@ -15,6 +15,7 @@
             body {
                 padding: 0;
                 margin: 0;
+                font-family:  "2018-09-fresh";
             }
 
             #content {
@@ -23,8 +24,8 @@
                 background-repeat: no-repeat;
                 background-position: center;
                 box-sizing: border-box;
-                font-family:  "2018-09-fresh";
                 margin: 0 auto;
+                text-align: center;
             }
             
             #content-cell {
@@ -32,16 +33,23 @@
                 height: 100%;
             }
             
-            #content-box {
-                max-height: calc(100% - 40px);
-                overflow-y: auto;
+            #content-tip {
+                font-size: 0.9em;
+                line-height: 1em;
+                color: #888;
             }
 
-            div#title {
+            #title {
                 font-size: 3em;
-                line-height: 1.8em;
+                line-height: 1.5em;
                 text-align: center;
                 color: #00adee;
+            }
+
+            #content-box {
+                overflow-y: scroll;
+                background: rgba(255, 255, 255, 0.6);
+                border-radius: 10px;
             }
 
             .show {
@@ -55,11 +63,33 @@
 
             .show-player {
                 float: right;
+                color: #555;
             }
             
             .show-blank {
                 clear: both;
                 height: 1em;
+            }
+            
+            #sponsor-box {
+                width: 100%;
+                position: relative;
+                margin-top: 2em;
+            }
+
+            #sponsor-box:before {
+                position: absolute;
+                top: -1.5em;
+                left: 20%;
+                width: 60%;
+                color: #300;
+                content: "特别赞助";
+            }
+            
+            #sponsor-box > div {
+                position: absolute;
+                top: 0;
+                background-size: 100%;
             }
         </style>
     </head>
@@ -68,18 +98,19 @@
             <tr>
                 <td id="content-cell">
                     <div id="title">节 目 单</div>
+                    <div id="content-tip">（请上下滑动查看节目）</div>
                     <div id="content-box">
                         <div class="show"><div class="show-name">歌曲《告白气球》</div><div class="show-player">万子超、石家豪、曹义彬、林鹏晟</div></div>
                         <div class="show"><div class="show-name">歌曲《卡路里》</div><div class="show-player">吉祥玉、王冀璇、蒋徐琳、陈婷</div></div>
                         <div class="show"><div class="show-name">舞蹈《仙才叹》</div><div class="show-player">徐妍</div></div>
                         <div class="show"><div class="show-name">歌曲《典狱司》</div><div class="show-player">吉祥玉、钟欣琪</div></div>
-                        <div class="show"><div class="show-name">《青鸟》</div><div class="show-player">蒋徐琳吉他伴奏、杨帆独唱</div></div>
+                        <div class="show"><div class="show-name">《青鸟》</div><div class="show-player">蒋徐琳 吉他伴奏、杨帆 独唱</div></div>
                         <div class="show"><div class="show-name">游戏环节：听歌识曲</div></div>
                         <div class="show-blank"></div>
                         <div class="show"><div class="show-name">情景剧</div><div class="show-player">马小东、李正茂、刘思远、张宇帆</div></div>
                         <div class="show"><div class="show-name">配音</div><div class="show-player">董千里、杨佳炜、刘潞、肖逸龙</div></div>
                         <div class="show"><div class="show-name">吉他弹唱  《需要人陪》</div><div class="show-player">陈梓正</div></div>
-                        <div class="show"><div class="show-name">《红颜旧》</div><div class="show-player">孟祥馨悦古筝伴奏、刘俊宙独唱</div></div>
+                        <div class="show"><div class="show-name">《红颜旧》</div><div class="show-player">孟祥馨悦 古筝伴奏、刘俊宙 独唱</div></div>
                         <div class="show"><div class="show-name">歌曲《小幸运》</div><div class="show-player">钟欣琪、徐妍、唐雅金、杨帆</div></div>
                         <div class="show"><div class="show-name">魔术</div><div class="show-player">莫山圣</div></div>
                         <div class="show"><div class="show-name">抽奖环节</div></div>
@@ -87,12 +118,20 @@
                         <div class="show"><div class="show-name">cups杯子舞</div><div class="show-player">尹佳芃、张淑婕、丁茜、钟沛文</div></div>
                         <div class="show"><div class="show-name">电子琴独奏《拉德茨基进行曲》+《赛马》</div><div class="show-player">周方升</div></div>
                         <div class="show"><div class="show-name">歌曲《庐州月》</div><div class="show-player">聂齐越、张晓彤</div></div>
-                        <div class="show"><div class="show-name">韩舞串烧《good luck +babe》</div><div class="show-player">尹佳芃</div></div>
+                        <div class="show"><div class="show-name">韩舞串烧《good luck + babe》</div><div class="show-player">尹佳芃</div></div>
+                    </div>
+                    <div id="sponsor-box">
+                        <div class="sponsor-01"></div>
+                        <div class="sponsor-02"></div>
                     </div>
                 </td>
             </tr>
         </table>
         <script>
+            var sponsors = document.getElementById("sponsor-box").children;
+            for (var i = 0; i < sponsors.length; i++) {
+                sponsors[i].style.backgroundImage = "url(\"images/2018-09-fresh-sponsor-" + (i < 9 && "0") + (i + 1) + ".png\")";
+            }
             function resizeHeight() {
                 var width = window.innerWidth < 568 ? window.innerWidth : 568,
                     height = width * 1.5,
@@ -103,6 +142,15 @@
                 contentStyle.height = height + "px";
                 contentStyle.fontSize = (fontSize > 14 ? fontSize : 14) + "px";
                 contentStyle.marginTop = (topMargin > 0 ? topMargin : 0) + "px";
+                document.getElementById("content-box").style.maxHeight = (width * 1.3 - fontSize * 7.4 - 50) + "px";
+                document.getElementById("sponsor-box").style.height = width / 5 + "px";
+                var sponsors = document.getElementById("sponsor-box").children;
+                for (var i = 0; i < sponsors.length; i++) {
+                    var sponsorStyle = sponsors[i].style;
+                    sponsorStyle.width = width / 5 + "px";
+                    sponsorStyle.height = width / 5 + "px";
+                    sponsorStyle.left = width * (0.45 - (sponsors.length * 2 - 1) * 0.1 + i * 0.4) + "px";
+                }
             }
             resizeHeight();
             window.addEventListener("resize", resizeHeight);
