@@ -16,6 +16,10 @@ body {
     font-size: 12px;
 }
 
+#cnzzLink {
+    display: none;
+}
+
 @media screen and (max-width: 699px) {
     #wechatLogo {
         width: 350px;
