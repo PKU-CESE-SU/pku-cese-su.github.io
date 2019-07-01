@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+        <link rel="shortcut icon" href="/favicon.ico">
+        <title>2019年环院毕业晚会节目单</title>
+        <style>
+            @font-face {
+                font-family: "2019-07-graduation";
+                src: url("images/2019-07-graduation.ttf") format("truetype");
+                font-style: normal;
+                font-weight: normal;
+            }
+            body {
+                padding: 0;
+                margin: 0;
+                font-family:  "2019-07-graduation";
+            }
+
+            #content {
+                background: url("images/2019-07-graduation-background.png");
+                background-size: 100%;
+                background-repeat: no-repeat;
+                background-position: center;
+                box-sizing: border-box;
+                margin: 0 auto;
+                text-align: center;
+            }
+            
+            #content-cell {
+                padding: 5%;
+                height: 100%;
+            }
+            
+            #content-tip {
+                font-size: 0.9em;
+                line-height: 1em;
+                color: #888;
+            }
+
+            #title {
+                font-size: 3em;
+                line-height: 1.5em;
+                text-align: center;
+                color: #A52A2A;
+            }
+
+            #content-box {
+                overflow-y: scroll;
+                background: rgba(255, 255, 255, 0.6);
+                border-radius: 10px;
+            }
+
+            .show {
+                clear: both;
+                line-height: 1.5em;
+            }
+
+            .show-name {
+                float: left;
+            }
+
+            .show-player {
+                float: right;
+                color: #555;
+            }
+            
+            .show-blank {
+                clear: both;
+                height: 1em;
+            }
+            
+            #sponsor-box {
+                width: 100%;
+                position: relative;
+                margin-top: 2em;
+            }
+
+            #sponsor-box:before {
+                position: absolute;
+                top: -1.5em;
+                left: 20%;
+                width: 60%;
+                color: #300;
+                content: "特别赞助";
+            }
+            
+            #sponsor-box > div {
+                position: absolute;
+                top: 0;
+                background-size: 100%;
+            }
+
+            #cnzzLink {
+                display: none;
+            }
+        </style>
+    </head>
+    <body>
+        <table id="content">
+            <tr>
+                <td id="content-cell">
+                    <div id="title">节 目 单</div>
+                    <div id="content-tip">（请上下滑动查看节目）</div>
+                    <div id="content-box">
+                        <div class="show"><div class="show-name">俄语歌曲《Я верю друзья》及朗诵</div><div class="show-player">宋锴</div></div>
+                        <div class="show"><div class="show-name">游戏"谁是卧底"及抽奖环节</div></div>
+                        <div class="show-blank"></div>
+                        <div class="show"><div class="show-name">魔术表演resonance</div><div class="show-player">莫山圣</div></div>
+                        <div class="show"><div class="show-name">音乐剧串烧《我们的四季》</div><div class="show-player">毛璐 马雪飞 刘宇心</div></div>
+                        <div class="show"><div class="show-name">游戏"反唱小苹果"及抽奖环节</div></div>
+                        <div class="show-blank"></div>
+                        <div class="show"><div class="show-name">《等你下课》</div><div class="show-player">吴晓萍 郭佳宝</div></div>
+                        <div class="show"><div class="show-name">《水手》</div><div class="show-player">张朴正 宋锴 郭佳宝 陈翔</div></div>
+                        <div class="show"><div class="show-name">《淘汰》</div><div class="show-player">郭佳宝 井泽华</div></div>
+                        <div class="show"><div class="show-name">游戏"踩报纸"及抽奖环节</div></div>
+                        <div class="show-blank"></div>
+                        <div class="show"><div class="show-name">合唱《朋友》</div></div>
+                    </div>
+                    </div>
+                </td>
+            </tr>
+        </table>
+        <div id="cnzzLink"><script src="https://s5.cnzz.com/z_stat.php?id=1275861275&web_id=1275861275"></script></div>
+        <script>
+            var sponsors = document.getElementById("sponsor-box").children;
+            for (var i = 0; i < sponsors.length; i++) {
+                sponsors[i].style.backgroundImage = "url(\"images/2018-09-fresh-sponsor-" + (i < 9 && "0") + (i + 1) + ".png\")";
+            }
+            function resizeHeight() {
+                var width = window.innerWidth < 568 ? window.innerWidth : 568,
+                    height = width * 1.5,
+                    fontSize = width / 25;
+                    topMargin = (window.innerHeight - height) / 2,
+                    contentStyle = document.getElementById("content").style;
+                contentStyle.width = width + "px";
+                contentStyle.height = height + "px";
+                contentStyle.fontSize = (fontSize > 14 ? fontSize : 14) + "px";
+                contentStyle.marginTop = (topMargin > 0 ? topMargin : 0) + "px";
+                document.getElementById("content-box").style.maxHeight = (width * 1.3 - fontSize * 7.4 - 50) + "px";
+                document.getElementById("sponsor-box").style.height = width / 5 + "px";
+                var sponsors = document.getElementById("sponsor-box").children;
+                for (var i = 0; i < sponsors.length; i++) {
+                    var sponsorStyle = sponsors[i].style;
+                    sponsorStyle.width = width / 5 + "px";
+                    sponsorStyle.height = width / 5 + "px";
+                    sponsorStyle.left = width * (0.45 - (sponsors.length * 2 - 1) * 0.1 + i * 0.4) + "px";
+                }
+            }
+            resizeHeight();
+            window.addEventListener("resize", resizeHeight);
+        </script>
+    </body>
+</html>
