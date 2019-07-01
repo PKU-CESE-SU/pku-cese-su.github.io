@@ -4,18 +4,18 @@
         <meta charset="utf-8"/>
         <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
         <link rel="shortcut icon" href="/favicon.ico">
-        <title>2请加弹幕墙QQ好友发弹幕</title>
+        <title>2019年环院毕业晚会节目单</title>
         <style>
             @font-face {
                 font-family: "2019-07-graduation";
-                src: url("images/2019-07-graduation.ttf") format("truetype");
+                src: url("images/2019-07-graduation-subfont.ttf") format("truetype");
                 font-style: normal;
                 font-weight: normal;
             }
             body {
                 padding: 0;
                 margin: 0;
-                font-family:  "2019-07-graduation";
+                font-family: "2019-07-graduation";
             }
 
             #content {
@@ -35,8 +35,13 @@
             
             #content-tip {
                 font-size: 0.9em;
-                line-height: 1em;
+                line-height: 2em;
                 color: #888;
+            }
+            
+            #logo {
+                width: 5em;
+                height: 5em;
             }
 
             #title {
@@ -50,7 +55,6 @@
                 overflow-y: scroll;
                 background: rgba(255, 255, 255, 0.6);
                 border-radius: 10px;
-                color: #000099;
             }
 
             .show {
@@ -60,6 +64,7 @@
 
             .show-name {
                 float: left;
+                text-align: left;
             }
 
             .show-player {
@@ -102,29 +107,22 @@
         <table id="content">
             <tr>
                 <td id="content-cell">
+                    <img id="logo" src="images/2019-07-graduation-logo.svg" />
                     <div id="title">弹 幕 墙</div>
                     <div id="content-box">
-                        <div class="show"><div class="show-name">请加弹幕墙官方QQ：1575243872</div></div>
-                        <div class="show-blank"></div>
-                        <div class="show"><div class="show-name">向该QQ发送内容即可转化为弹幕</div></div>
-                        <div class="show"><div class="show-name">支持文字、表情和图片形式的弹幕</div></div>
-                        <div class="show-blank"></div>
-                        <div class="show"><div class="show-name">请文明、合理地使用弹幕墙</div></div>
-                        <div class="show"><div class="show-name">欢迎大家参与弹幕墙</div></div>
-                        <div class="show-blank"></div>
-                    </div>
+                        <div>请加弹幕墙官方QQ：1575243872</div>
+                        <div>向该QQ发送内容即可转化为弹幕</div>
+                        <div>支持文字、表情和图片形式的弹幕</div>
+                        <div>请文明、合理地使用弹幕墙</div>
+                        <div>欢迎大家参与弹幕墙</div>
                     </div>
                 </td>
             </tr>
         </table>
         <div id="cnzzLink"><script src="https://s5.cnzz.com/z_stat.php?id=1275861275&web_id=1275861275"></script></div>
         <script>
-            var sponsors = document.getElementById("sponsor-box").children;
-            for (var i = 0; i < sponsors.length; i++) {
-                sponsors[i].style.backgroundImage = "url(\"images/2018-09-fresh-sponsor-" + (i < 9 && "0") + (i + 1) + ".png\")";
-            }
             function resizeHeight() {
-                var width = window.innerWidth < 568 ? window.innerWidth : 568,
+                var width = window.innerWidth < 800 ? window.innerWidth : 800,
                     height = width * 1.5,
                     fontSize = width / 25;
                     topMargin = (window.innerHeight - height) / 2,
@@ -133,15 +131,8 @@
                 contentStyle.height = height + "px";
                 contentStyle.fontSize = (fontSize > 14 ? fontSize : 14) + "px";
                 contentStyle.marginTop = (topMargin > 0 ? topMargin : 0) + "px";
+                document.getElementById("content-box").style.minHeight = (width * 1.3 - fontSize * 7.4 - 50) + "px";
                 document.getElementById("content-box").style.maxHeight = (width * 1.3 - fontSize * 7.4 - 50) + "px";
-                document.getElementById("sponsor-box").style.height = width / 5 + "px";
-                var sponsors = document.getElementById("sponsor-box").children;
-                for (var i = 0; i < sponsors.length; i++) {
-                    var sponsorStyle = sponsors[i].style;
-                    sponsorStyle.width = width / 5 + "px";
-                    sponsorStyle.height = width / 5 + "px";
-                    sponsorStyle.left = width * (0.45 - (sponsors.length * 2 - 1) * 0.1 + i * 0.4) + "px";
-                }
             }
             resizeHeight();
             window.addEventListener("resize", resizeHeight);
