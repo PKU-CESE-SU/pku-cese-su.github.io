@@ -1,1 +1,157 @@
 
+<html lang="zh-cn">
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+        <link rel="shortcut icon" href="/favicon.ico">
+        <title>2019年环院迎新晚会节目单</title>
+        <style>
+            @font-face {
+                font-family: "2018-09-fresh";
+                src: url("images/2018-09-fresh.ttf") format("truetype");
+                font-style: normal;
+                font-weight: normal;
+            }
+            body {
+                padding: 0;
+                margin: 0;
+                font-family:  "2018-09-fresh";
+            }
+            #content {
+                background: url("images/2019-09-fresh-background.png");
+                background-size: 100%;
+                background-repeat: no-repeat;
+                background-position: center;
+                box-sizing: border-box;
+                margin: 0 auto;
+                text-align: center;
+            }
+
+            #content-cell {
+                padding: 5%;
+                height: 100%;
+            }
+
+            #content-tip {
+                font-size: 0.9em;
+                line-height: 1em;
+                color: #888;
+            }
+            #title {
+                font-size: 3em;
+                line-height: 1.5em;
+                text-align: center;
+                color: #00adee;
+            }
+            #content-box {
+                overflow-y: scroll;
+                background: rgba(255, 255, 255, 0.6);
+                border-radius: 10px;
+            }
+            .show {
+                clear: both;
+                line-height: 1.5em;
+            }
+            .show-name {
+                float: left;
+            }
+            .show-player {
+                float: right;
+                color: #555;
+            }
+
+            .show-blank {
+                clear: both;
+                height: 1em;
+            }
+
+            #sponsor-box {
+                width: 100%;
+                position: relative;
+                margin-top: 2em;
+            }
+            #sponsor-box:before {
+                position: absolute;
+                top: -1.5em;
+                left: 20%;
+                width: 60%;
+                color: #300;
+                content: "特别赞助";
+            }
+
+            #sponsor-box > div {
+                position: absolute;
+                top: 0;
+                background-size: 100%;
+            }
+            #cnzzLink {
+                display: none;
+            }
+        </style>
+    </head>
+    <body>
+        <table id="content">
+            <tr>
+                <td id="content-cell">
+                    <div id="title">节 目 单</div>
+                    <div id="content-tip">（请上下滑动查看节目）</div>
+                    <div id="content-box">
+                        <div class="show"><div class="show-name">歌曲《借》</div><div class="show-player">魏鑫</div></div>
+                        <div class="show"><div class="show-name">吉他伴唱《童年》</div><div class="show-player">王瀚喆 葛昀宋 燕书欣 姚鹏</div></div>
+                        <div class="show"><div class="show-name">纸牌魔术</div><div class="show-player">房晨 李尔春 罗欢 周一寰</div></div>
+                        <div class="show"><div class="show-name">歌曲《春节自救指南》</div><div class="show-player">宋思潼 夏千淞 覃健梅 陈熙民</div></div>
+                        <div class="show"><div class="show-name">游戏一&抽奖环节</div></div>
+                        <div class="show-blank"></div>
+                        <div class="show"><div class="show-name">双节棍表演</div><div class="show-player">李卓超</div></div>
+                        <div class="show"><div class="show-name">燕园新闻联播</div><div class="show-player">胡金龙 马啸天 卢艺文</div></div>
+                        <div class="show"><div class="show-name">歌曲《lose yourself》</div><div class="show-player">董思远</div></div>
+                        <div class="show"><div class="show-name">视频《指尖燕园》</div><div class="show-player">戎海凤 柴乾乾</div></div>
+                        <div class="show"><div class="show-name">歌曲串烧</div><div class="show-player">段瀚生 徐启嘉 屈岩 李想</div></div>
+                        <div class="show"><div class="show-name">游戏二&抽奖环节</div></div>
+                        <div class="show-blank"></div>
+                        <div class="show"><div class="show-name">歌曲《老男孩》</div><div class="show-player">王天黄 韩富磊 朱嘉木 张朝奕</div></div>
+                        <div class="show"><div class="show-name">歌曲《达拉崩吧》</div><div class="show-player">董俊 任尉菡 方泓哲 黄卓楷</div></div>
+                        <div class="show"><div class="show-name">歌曲《陪你度过漫长岁月》</div><div class="show-player">周橡南 吕韪帆 朱志郅</div></div>
+                        <div class="show"><div class="show-name">配音《小猪佩奇》</div><div class="show-player">谭谨捷 周珊宇 王子若</div></div>
+                        <div class="show"><div class="show-name">抽奖环节</div></div>
+                        <div class="show"><div class="show-name">歌曲《不染》</div><div class="show-player">刘安齐</div></div>
+                        <div class="show"><div class="show-name">口琴独奏《宫崎骏作品组曲》</div><div class="show-player">裘彦挺</div></div>
+                    </div>
+                    <div id="sponsor-box">
+                        <div class="sponsor-01"></div>
+                        <div class="sponsor-02"></div>
+                    </div>
+                </td>
+            </tr>
+        </table>
+        <div id="cnzzLink"><script src="https://s5.cnzz.com/z_stat.php?id=1275861275&web_id=1275861275"></script></div>
+        <script>
+            var sponsors = document.getElementById("sponsor-box").children;
+            for (var i = 0; i < sponsors.length; i++) {
+                sponsors[i].style.backgroundImage = "url(\"images/2018-09-fresh-sponsor-" + (i < 9 && "0") + (i + 1) + ".png\")";
+            }
+            function resizeHeight() {
+                var width = window.innerWidth < 568 ? window.innerWidth : 568,
+                    height = width * 1.5,
+                    fontSize = width / 25;
+                    topMargin = (window.innerHeight - height) / 2,
+                    contentStyle = document.getElementById("content").style;
+                contentStyle.width = width + "px";
+                contentStyle.height = height + "px";
+                contentStyle.fontSize = (fontSize > 14 ? fontSize : 14) + "px";
+                contentStyle.marginTop = (topMargin > 0 ? topMargin : 0) + "px";
+                document.getElementById("content-box").style.maxHeight = (width * 1.3 - fontSize * 7.4 - 50) + "px";
+                document.getElementById("sponsor-box").style.height = width / 5 + "px";
+                var sponsors = document.getElementById("sponsor-box").children;
+                for (var i = 0; i < sponsors.length; i++) {
+                    var sponsorStyle = sponsors[i].style;
+                    sponsorStyle.width = width / 5 + "px";
+                    sponsorStyle.height = width / 5 + "px";
+                    sponsorStyle.left = width * (0.45 - (sponsors.length * 2 - 1) * 0.1 + i * 0.4) + "px";
+                }
+            }
+            resizeHeight();
+            window.addEventListener("resize", resizeHeight);
+        </script>
+    </body>
+</html>
