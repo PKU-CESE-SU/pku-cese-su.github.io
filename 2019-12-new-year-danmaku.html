@@ -1,134 +1,244 @@
 <!DOCTYPE html>
 <html lang="zh-cn">
-    <head>
-        <meta charset="utf-8"/>
-        <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
-        <link rel="shortcut icon" href="/favicon.ico">
-        <title>2019年环院毕业晚会节目单</title>
-        <style>
-            @font-face {
-                font-family: "2019-07-graduation";
-                src: url("images/2019-07-graduation-subfont.ttf") format("truetype");
-                font-style: normal;
-                font-weight: normal;
-            }
-            body {
-                padding: 0;
-                margin: 0;
-                font-family: "2019-07-graduation";
-            }
-            #content {
-                background: url("images/2019-07-graduation-background.png");
-                background-size: 100%;
-                background-repeat: no-repeat;
-                background-position: center;
-                box-sizing: border-box;
-                margin: 0 auto;
-                text-align: center;
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="shortcut icon" href="">
+    <title>2020年环院“廿廿不忘”新年晚会节目单</title>
+    <style>
+        @font-face {
+            font-weight: normal;
+            font-style: normal;
+            font-family: "2019-12-new-year";
+            src: url("images/2019-12-new-year.ttf") format("truetype");
+        }
+
+        @font-face {
+            font-weight: bold;
+            font-style: bold;
+            font-family: "2019-12-new-year-english";
+            src: url("images/2019-12-new-year-english.ttf") format("truetype");
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background:url("images/2019-12-new-year-background.png");
+            color: #ffffff;
+            font-family:  "2019-12-new-year";
+        }
+
+        #backgroundImageBlock{
+            z-index:-1;
+            box-sizing: border-box;
+            object-fit: contain;
+            object-position: center center;
+        }
+
+        .backgroundImage{
+            position:absolute;
+            filter: drop-shadow(10px 10px 10px rgba(0,0,0,.5));
+        }
+
+
+        #content {
+            box-sizing: border-box;
+            margin: 0 auto;
+            text-align: center;
+            border-spacing: 0px;
+            color: #e6cd7f;
+        }
+
+        #content-cell {
+            position: relative;
+            padding: 5%;
+            height: 100%;
+        }
+
+        #title {
+            color: #e6cd7f;
+            text-align: center;
+            font-size: 2em;
+            font-family:  "2019-12-new-year";
+            line-height: 1.2em;
+        }
+
+        #title-english {
+            color: #e6cd7f;
+            text-align: center;
+            font-size: 1.5em;
+            font-family:  "2019-12-new-year-english";
+            line-height: 1.2em;
+        }
+
+        #content-tip {
+            color: #888;
+            text-align: center;
+            text-shadow: #fff 1px 1px 1px, #fff -1px -1px 1px, #fff -1px 1px 1px, #fff 1px -1px 1px;
+            font-size: 0.8em;
+            line-height: 1.5em;
+        }
+
+        #content-line-top, #content-line-bottom {
+            position: relative;
+            margin: 0.5em auto;
+            width: 14.88em;
+            height: 0.64em;
+            background-image: url(images/2019-12-new-year-line.png);
+            background-size: 100% 200%;
+        }
+
+        #content-line-bottom {
+            background-position-y: bottom;
+        }
+
+        #content-box:after {
+            clear: both;
+            display: block;
+            content: '';
+        }
+
+        .show {
+            clear: both;
+            line-height: 1.5em;
+        }
+
+        .show-name {
+            float: left;
+            max-width: 70%;
+            color: #e6cd7f;
+            text-align: left;
+            /* text-shadow: #000 1px 1px 1px, #000 -1px -1px 1px, #000 -1px 1px 1px, #000 1px -1px 1px; */
+        }
+
+        .show-player {
+            float: right;
+            max-width: 70%;
+            color: #e6cd7f;
+            text-align: right;
+            /* text-shadow: #fff 1px 1px 1px, #fff -1px -1px 1px, #fff -1px 1px 1px, #fff 1px -1px 1px; */
+            font-size: 0.8em;
+        }
+
+        .show-blank {
+            clear: both;
+            height: 1em;
+        }
+
+        #sponsor-box {
+            position: relative;
+            margin-top: 1em;
+            width: 100%;
+        }
+
+        #sponsor-box > div {
+            position: absolute;
+            top: 0;
+            background-size: 100%;
+        }
+
+        .copyright {
+            position: relative;
+            bottom: 0;
+            left: 0;
+            margin-top:0.3em;
+            width: 100%;
+            color: #e6cd7f;
+            text-align: center;
+            font-size: 0.8em;
+        }
+
+        #cnzzLink {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="backgroundImageBlock">
+        <img class="backgroundImage" src="images/2019-12-new-year-cloud.png" data-width="125" data-height="75" data-top="50" data-left="16" style="position: absolute;">
+        <img class="backgroundImage" src="images/2019-12-new-year-cloud.png" data-width="125" data-height="75" data-top="500" data-right="30" style="position: absolute;">
+        <img class="backgroundImage" src="images/2019-12-new-year-round.png" data-width="125" data-height="125" data-bottom="-10" data-left="30" style="position: fixed;">
+        <img class="backgroundImage" src="images/2019-12-new-year-round.png" data-width="100" data-height="100" data-bottom="50" data-left="-30" style="position: fixed;">
+        <img class="backgroundImage" src="images/2019-12-new-year-bottom.png" data-width="150" data-height="125" data-bottom="70" data-right="-10" style="position: fixed;">
+    </div>
+    <table id="content">
+        <tbody><tr><td id="content-cell">
+            <div id="title">弹幕墙</div>
+            <div id="title-english">Danmaku Wall</div>
+            <div id="content-line-top"></div>
+                <div id="content-box">
+                    <div>请添加弹幕墙官方QQ：1575243872</div>
+                    <div>问题答案：弹幕墙</div>
+                    <div>向该QQ发送内容即可转化为弹幕</div>
+                    <div>支持文字、表情和图片形式的弹幕</div>
+                    <div>请文明、合理地使用弹幕墙</div>
+                    <div>欢迎大家参与弹幕墙</div>
+                </div>
+            <div id="content-line-bottom"></div>
+            <footer>
+                <div id="sponsor-box" style="height: 126.2px;">
+                    <div class="sponsor-01"></div>
+                    <div class="sponsor-02"></div>
+                </div>
+                <div class="copyright">
+                    <span style="margin-right: 0.5em;">北京大学环境科学与工程学院</span>
+                    <img src="images/2020.png" style="height: 2em; vertical-align: middle;">
+                </div>
+            </footer>
+        </td></tr></tbody>
+    </table>
+    <script>
+        var sponsors = document.getElementById("sponsor-box").children;
+        for (var i = 0; i < sponsors.length; i++) {
+            sponsors[i].style.backgroundImage = "url(\"images/2019-12-new-year-sponsor-" + (i < 9 && "0") + (i + 1) + ".png\")";
+        }
+        function resizeHeight() {
+            var MAX_WIDTH = 625,
+                width = window.innerWidth < MAX_WIDTH ? window.innerWidth : MAX_WIDTH,
+                scale = width / MAX_WIDTH,
+                height = width * 1.5,
+                fontSize = (width / 25) > 14 ? (width / 25) : 14;
+                topMargin = (window.innerHeight - height) / 2,
+                leftMargin = (window.innerWidth - width) / 2,
+                fontScale = fontSize * 25 / MAX_WIDTH;
+                contentStyle = document.getElementById("content").style;
+            contentStyle.width = width + "px";
+            contentStyle.fontSize = fontSize + "px";
+            
+            var backgroundImageBlocks = document.getElementById("backgroundImageBlock").children;
+            for (var i = 0; i < backgroundImageBlocks.length; i++) {
+                var image = backgroundImageBlocks[i],
+                    imageStyle = image.style,
+                    imageWidth = +image.dataset.width,
+                    imageHeight = +image.dataset.height,
+                    imageTop = +image.dataset.top,
+                    imageRight = +image.dataset.right,
+                    imageBottom = +image.dataset.bottom,
+                    imageLeft = +image.dataset.left;
+                imageStyle.width = imageWidth * fontScale + "px";
+                imageStyle.height = imageHeight * fontScale + "px";
+                imageLeft && (imageStyle.left = leftMargin + imageLeft * scale + "px");
+                imageRight && (imageStyle.right = leftMargin + imageRight * scale + "px");
+                imageTop && (imageStyle.top = imageTop * fontScale + "px");
+                imageBottom && (imageStyle.bottom = imageBottom * fontScale + "px");
             }
             
-            #content-cell {
-                padding: 5%;
-                height: 100%;
+            document.getElementById("sponsor-box").style.height = width / 5 + "px";
+            var sponsors = document.getElementById("sponsor-box").children;
+            for (var i = 0; i < sponsors.length; i++) {
+                var sponsorStyle = sponsors[i].style;
+                sponsorStyle.width = width / 5 + "px";
+                sponsorStyle.height = width / 5 + "px";
+                sponsorStyle.left = width * (0.45 - (sponsors.length * 2 - 1) * 0.1 + i * 0.4) + "px";
             }
-            
-            #content-tip {
-                font-size: 0.9em;
-                line-height: 2em;
-                color: #888;
-            }
-            
-            #logo {
-                width: 5em;
-                height: 5em;
-            }
-            #title {
-                font-size: 3em;
-                line-height: 1.5em;
-                text-align: center;
-                color: #A52A2A;
-            }
-            #content-box {
-                overflow-y: scroll;
-                background: rgba(255, 255, 255, 0.6);
-                border-radius: 10px;
-            }
-            .show {
-                clear: both;
-                line-height: 1.5em;
-            }
-            .show-name {
-                float: left;
-                text-align: left;
-            }
-            .show-player {
-                float: right;
-                color: #555;
-            }
-            
-            .show-blank {
-                clear: both;
-                height: 1em;
-            }
-            
-            #sponsor-box {
-                width: 100%;
-                position: relative;
-                margin-top: 2em;
-            }
-            #sponsor-box:before {
-                position: absolute;
-                top: -1.5em;
-                left: 20%;
-                width: 60%;
-                color: #300;
-                content: "特别赞助";
-            }
-            
-            #sponsor-box > div {
-                position: absolute;
-                top: 0;
-                background-size: 100%;
-            }
-            #cnzzLink {
-                display: none;
-            }
-        </style>
-    </head>
-    <body>
-        <table id="content">
-            <tr>
-                <td id="content-cell">
-                    <img id="logo" src="images/2019-07-graduation-logo.svg" />
-                    <div id="title">弹 幕 墙</div>
-                    <div id="content-box">
-                        <div>请加弹幕墙官方QQ：1575243872</div>
-                        <div>问题答案：弹幕墙</div>
-                        <div>向该QQ发送内容即可转化为弹幕</div>
-                        <div>支持文字、表情和图片形式的弹幕</div>
-                        <div>请文明、合理地使用弹幕墙</div>
-                        <div>欢迎大家参与弹幕墙</div>
-                    </div>
-                </td>
-            </tr>
-        </table>
-        <div id="cnzzLink"><script src="https://s5.cnzz.com/z_stat.php?id=1275861275&web_id=1275861275"></script></div>
-        <script>
-            function resizeHeight() {
-                var width = window.innerWidth < 800 ? window.innerWidth : 800,
-                    height = width * 1.5,
-                    fontSize = width / 25;
-                    topMargin = (window.innerHeight - height) / 2,
-                    contentStyle = document.getElementById("content").style;
-                contentStyle.width = width + "px";
-                contentStyle.height = height + "px";
-                contentStyle.fontSize = (fontSize > 14 ? fontSize : 14) + "px";
-                contentStyle.marginTop = (topMargin > 0 ? topMargin : 0) + "px";
-                document.getElementById("content-box").style.minHeight = (width * 1.3 - fontSize * 7.4 - 50) + "px";
-                document.getElementById("content-box").style.maxHeight = (width * 1.3 - fontSize * 7.4 - 50) + "px";
-            }
-            resizeHeight();
-            window.addEventListener("resize", resizeHeight);
-        </script>
-    </body>
+        }
+        resizeHeight();
+        window.addEventListener("resize", resizeHeight);
+    </script>
+</body>
 </html>
